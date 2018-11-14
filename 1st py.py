@@ -1,2 +1,4 @@
-#这是我写的第一行git 代码
-print("我来了")
+#from wxpy import *
+#bot = Bot()
+#myself = bot.self
+#bot.file_helper.send('这是自动发送的WX')
