@@ -7,7 +7,7 @@ poem = """
 with logic so firmly planted
 cannot discern \n the needs of love
 nor comprehend passion from intuition
-andrequires an explanation
+and requires an explanation
 \n\twhere there is none.
 """
 print("----------------")
