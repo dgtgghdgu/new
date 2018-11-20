@@ -24,6 +24,10 @@ def deal(serial,player):
     del(serial_main[rnd_int])
     return serial_main,player_card
 
+def showdown(player1,player2):
+    
+
+
 main_poker_serial = []
 
 
@@ -41,17 +45,16 @@ print("*" *30)
 
 player_1 = Player()
 main_poker_serial,player_1_card = deal(main_poker_serial,player_1)
-
-
 print(len(main_poker_serial),main_poker_serial)
 print("*" *30)
 print(player_1_card)
-print("*" *30)
+
+
 
 player_2 = Player()
 main_poker_serial,player_2_card = deal(main_poker_serial,player_2)
-
 print("*" *30)
 print(player_2_card)
-print("*" *30)
+
+
 
