@@ -19,7 +19,7 @@ def whoisbig(p1,p2):
 
 def deal(serial,player):
     serial_main =serial
-    rnd_int = random.randint(len(serial_main))
+    rnd_int = random.randint(1,len(serial_main))
     player_card = serial_main[rnd_int]
     del(serial_main[rnd_int])
     return serial_main,player_card
@@ -32,6 +32,8 @@ for i in range(13):
         main_poker_serial.append(j+str(i+1))
 
 print(main_poker_serial)
+print(len(main_poker_serial))
+print("*" *30)
 
 #main_poker_serial_ready = random.shuffle(main_poker_serial)
 
@@ -42,10 +44,14 @@ main_poker_serial,player_1_card = deal(main_poker_serial,player_1)
 
 
 print(len(main_poker_serial),main_poker_serial)
+print("*" *30)
 print(player_1_card)
-
+print("*" *30)
 
 player_2 = Player()
-player_2_point = player_2.get_card(len(main_poker_serial))
+main_poker_serial,player_2_card = deal(main_poker_serial,player_2)
 
+print("*" *30)
+print(player_2_card)
+print("*" *30)
 
