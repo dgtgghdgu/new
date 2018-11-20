@@ -34,7 +34,7 @@ print("OR state has:%s" % hashmap.get(cities,"OR"))
 
 print("*" * 20)
 print("Michigan has %s" % hashmap.get(cities,hashmap.get(states,"Michigan")))
-print("Florida has %s" % hashmap.get(cities,hashmap(states,"Florida")))
+print("Florida has %s" % hashmap.get(cities,hashmap.get(states,"Florida")))
 
 #print every state abbreviation
 
