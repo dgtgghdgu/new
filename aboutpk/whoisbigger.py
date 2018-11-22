@@ -1,32 +1,20 @@
 # -*- conding:Utf-8 -*-
 import random
 import pandas as pd
-import numpy as np
 
 class Player(object):
     def __init__(self):
         pass
 
-    card = None
-
-    def get_card(self,count):
-        #随机获得一张点数
-        rand_int = random.randint(1,count)
-        return rand_int
-
-    def show_card(self,cards):
-        print("底牌：")
-
-def whoisbig(p1,p2):
-    pass
+    card = ""
 
 
 def deal(serial, player) :
     serial_main =serial
     rnd_int = random.randint(0,(len(serial_main)-1))
-    player.card = serial_main[rnd_int]
+    player_card = serial_main[rnd_int]
     del(serial_main[rnd_int])
-    return serial_main,player.card
+    return serial_main,player_card
 
 def showdown(p_card1,p_card2):
     if int(p_card1[1:]) > int(p_card2[1:]):
@@ -50,10 +38,6 @@ for i in range(13):
 
 print(main_poker_serial)
 print(len(main_poker_serial))
-print("*" *30)
-print(main_poker_serial[0:52])
-
-
 
 #print("%s 获胜。\n赢家是 %s。" % (showdown(player_1.card,player_2.card)))
 
@@ -61,12 +45,12 @@ winner_count_list = []
 
 for i in range(100):
     player_1 = Player()
-    main_poker_serial,player_1.card = deal(main_poker_serial, player_1)
+    main_poker_serial,player_1_card = deal(main_poker_serial,player_1)
 
     player_2 = Player()
-    main_poker_serial,player_2.card = deal(main_poker_serial,player_2)
+    main_poker_serial,player_2_card = deal(main_poker_serial,player_2)
 
-    winner_count_list.append(showdown(player_1.card,player_2.card))
+    winner_count_list.append(showdown(player_1_card,player_2_card))
 
 print(winner_count_list)
 
