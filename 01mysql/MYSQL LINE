@@ -1,0 +1,45 @@
+create table orgfull(
+id tinyint unsigned PRIMARY KEY auto_increment,
+org_ref varchar(60) NOT NULL,
+org_full varchar(90),
+taxid varchar(15),
+adress varchar(90),
+contact char(15) DEFAULT NULL,
+phone INT DEFAULT NULL,
+note varchar(100) DEFAULT NULL)CHARSET utf8;
+
+create table control(
+id tinyint unsigned PRIMARY KEY auto_increment,
+org_ref varchar(60) NOT NULL,
+npandmz1 varchar(60) NOT NULL,
+npandmz2 varchar(60) NOT NULL,
+npandmz3 varchar(60) NOT NULL,
+npandmz4 varchar(60) NOT NULL,
+npandmz5 varchar(60) NOT NULL,
+npandmz6 varchar(60) NOT NULL,
+npandmz7 varchar(60) NOT NULL,
+npandmz8 varchar(60) NOT NULL)
+CHARSET = utf8;
+
+create table price(
+id tinyint unsigned PRIMARY KEY auto_increment,
+name varchar(60) NOT NULL,
+code varchar(60) NOT NULL,
+price smallint NOT NULL);
+
+
+INSERT INTO orgfull(org_ref)
+VALUES
+("XWB"),
+("ZFB")
+
+alter table 表名 alter column 字段名 drop default; (若本身存在默认值，则先删除)
+
+alter table 表名 alter column 字段名 set default 默认值;(若本身不存在则可以直接设定)
+alter table orgfull alter couumn contact set default  NULL;
+alter table orgfull modify contact varchar(15) default NULL;
+alter table orgfull modify phone int default NULL;
+
+SELECT * from orgfull;
+
+drop table orgfull;
